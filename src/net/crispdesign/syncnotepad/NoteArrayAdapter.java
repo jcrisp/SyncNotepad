@@ -33,7 +33,7 @@ public class NoteArrayAdapter extends ArrayAdapter {
 		View row = convertView;
 		if (row == null) {
 			LayoutInflater inflater = LayoutInflater.from(getContext());
-			row = inflater.inflate(R.layout.noteslist_item, parent, false);
+			row = inflater.inflate(R.layout.note_list_item, parent, false);
 
 		}
 		// Get reference to TextView holder
