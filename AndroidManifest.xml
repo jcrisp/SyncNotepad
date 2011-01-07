@@ -11,6 +11,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NoteEditActivity"
+                  android:label="@string/edit_note">
+        </activity>
 
     </application>
     <uses-sdk android:minSdkVersion="8" />

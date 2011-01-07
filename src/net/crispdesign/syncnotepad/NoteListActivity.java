@@ -3,6 +3,7 @@ package net.crispdesign.syncnotepad;
 import org.kroz.activerecord.ActiveRecordException;
 import java.util.List;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -39,16 +40,33 @@ public class NoteListActivity extends ListActivity {
 		});
 
 	}
+	
+//	@Override
+//	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//		// TODO Auto-generated method stub
+//		super.onActivityResult(requestCode, resultCode, data);
+//		long noteId = data.getLongExtra("id", -1);
+//		if (noteId > 0) {
+//			try {
+//				listAdapter.add(db.connection().findByID(Note.class, noteId));
+//			} catch (ActiveRecordException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		}
+//	}
 
 	private void addNote() {
-		try {
-			Note note = db.connection().newEntity(Note.class);
-			note.noteText = "Hello this is a note";
-			note.save();
-			listAdapter.add(note);
-		} catch (ActiveRecordException e) {
-			e.printStackTrace();
-		}
+		Intent intent = new Intent(this, NoteEditActivity.class);
+		startActivity(intent);
+//		try {
+//			Note note = db.connection().newEntity(Note.class);
+//			note.noteText = "Hello this is a note";
+//			note.save();
+//			listAdapter.add(note);
+//		} catch (ActiveRecordException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 	@Override

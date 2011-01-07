@@ -39,8 +39,20 @@ public class NoteArrayAdapter extends ArrayAdapter {
 		// Get reference to TextView holder
 		TextView label = (TextView) row.findViewById(R.id.list_item_text);
 		Note item = getItem(position);
-		label.setText(item.noteText.toString());
+
+		String text = item.noteText.toString();
+		label.setText(firstLine(text));
 
 		return row;
 	}
+	
+	private String firstLine(String text) {
+		String firstLine = text;
+		int indexOfNewLine = text.indexOf("\n");
+		if (indexOfNewLine > -1) {
+			firstLine = text.substring(0, indexOfNewLine);
+		}
+		return firstLine;
+	}
+	
 }
