@@ -15,6 +15,8 @@ import android.widget.EditText;
 public class NoteEditActivity extends Activity {
 
 	private Db db;
+	private Note note;
+	private EditText textBox;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -24,14 +26,27 @@ public class NoteEditActivity extends Activity {
 		db = new Db();
 		try {
 			db.connect(getApplicationContext());
+			
+			long noteId = getIntent().getLongExtra("id", -1);
+			
+			if (noteId < 0) {
+				note = db.connection().newEntity(Note.class);
+			} else {
+				note = db.connection().findByID(Note.class, noteId);
+			}
+
 		} catch (ActiveRecordException e) {
 			e.printStackTrace();
 		}
+		
+		textBox = (EditText) findViewById(R.id.edit_note_text);
+		textBox.setText(note.noteText);
 
 		Button newButton = (Button) findViewById(R.id.done_edit_button);
 		newButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				getIntent().putExtra("id", save());
+				setResult(RESULT_OK, getIntent());
 				finish();
 			}
 		});
@@ -40,9 +55,11 @@ public class NoteEditActivity extends Activity {
 
 	private long save() {
 		try {
-			Note note = db.connection().newEntity(Note.class);
-			EditText textBox = (EditText) findViewById(R.id.edit_note_text);
-			note.noteText = textBox.getText().toString();
+			String noteText = textBox.getText().toString();
+			if (noteText.trim().length() == 0) {
+				return -1;
+			}
+			note.noteText = noteText;
 			return note.save();
 		} catch (ActiveRecordException e) {
 			e.printStackTrace();

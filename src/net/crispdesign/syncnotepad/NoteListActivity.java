@@ -3,11 +3,14 @@ package net.crispdesign.syncnotepad;
 import org.kroz.activerecord.ActiveRecordException;
 import java.util.List;
 import android.app.ListActivity;
+import android.content.ContentUris;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ListView;
 
 public class NoteListActivity extends ListActivity {
 
@@ -38,35 +41,34 @@ public class NoteListActivity extends ListActivity {
 				addNote();
 			}
 		});
-
 	}
 	
-//	@Override
-//	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//		// TODO Auto-generated method stub
-//		super.onActivityResult(requestCode, resultCode, data);
-//		long noteId = data.getLongExtra("id", -1);
-//		if (noteId > 0) {
-//			try {
-//				listAdapter.add(db.connection().findByID(Note.class, noteId));
-//			} catch (ActiveRecordException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		}
-//	}
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+		Intent intent = new Intent(this, NoteEditActivity.class);
+		intent.putExtra("id", id);
+		startActivityForResult(intent, 0);
+    }
 
 	private void addNote() {
 		Intent intent = new Intent(this, NoteEditActivity.class);
-		startActivity(intent);
-//		try {
-//			Note note = db.connection().newEntity(Note.class);
-//			note.noteText = "Hello this is a note";
-//			note.save();
-//			listAdapter.add(note);
-//		} catch (ActiveRecordException e) {
-//			e.printStackTrace();
-//		}
+		startActivityForResult(intent, 0);
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		long noteId = data.getLongExtra("id", -1);
+		if (noteId > 0) {
+			try {
+				Note note = db.connection().findByID(Note.class, noteId);
+				listAdapter.add(note);
+			} catch (ActiveRecordException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 
 	@Override

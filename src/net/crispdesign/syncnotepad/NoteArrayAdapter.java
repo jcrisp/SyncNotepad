@@ -22,6 +22,11 @@ public class NoteArrayAdapter extends ArrayAdapter {
 	public Note getItem(int index) {
 		return (Note) this.notes.get(index);
 	}
+	
+	@Override
+	public long getItemId(int index) {
+		return getItem(index).getID();
+	}
 
 	@Override
 	public int getCount() {
