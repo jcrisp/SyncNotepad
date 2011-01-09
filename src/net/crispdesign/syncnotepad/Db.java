@@ -1,5 +1,7 @@
 package net.crispdesign.syncnotepad;
 
+import java.util.List;
+
 import org.kroz.activerecord.ActiveRecordBase;
 import org.kroz.activerecord.ActiveRecordException;
 import org.kroz.activerecord.Database;
@@ -14,34 +16,48 @@ public class Db {
 	private final static int dbVersion = 2;
 
 	private DatabaseBuilder builder = null;
-	private ActiveRecordBase _connection = null;
+	private ActiveRecordBase connection = null;
 
-	public Db() {
-	}
-
-	public void connect(Context context) throws ActiveRecordException {
-		if (_connection == null) {
-			builder = new DatabaseBuilder(dbName);
-			builder.addClass(Note.class);
-			Database.setBuilder(builder);
-			_connection = ActiveRecordBase.open(context, dbName, dbVersion);
-		}
+	public Db(Context context) {
+		builder = new DatabaseBuilder(dbName);
+		builder.addClass(Note.class);
+		Database.setBuilder(builder);
+		
+		try { connection = ActiveRecordBase.open(context, dbName, dbVersion); } 
+		catch(Exception e) { dbException(e); }
 	}
 	
-	public ActiveRecordBase connection() {
-		return _connection;
+	public List<Note> allNotes() {
+		try { return connection.findAll(Note.class); } 
+		catch(Exception e) { dbException(e); return null; }
 	}
 	
-	public void closeConnection() {
-		if (_connection != null) {
-			_connection.close();
+	public void save(Note note) {
+		long id = -1;
+		try { 
+			id = note.save(); 
+			if (id == -1) dbException(new ActiveRecordException("Returned -1 from save")); 
+		} 
+		catch(Exception e) { dbException(e); }
+	}
+	
+	public void close() {
+		if (connection != null) {
+			connection.close();
 		}
 	}
 
-	// public Database getDatabase() throws ActiveRecordException {
-	// Database database = Database.createInstance(ctx, dbName, dbVersion);
-	// database.open();
-	// return database;
-	// }
+	public Note newNote() {
+		try { return connection.newEntity(Note.class); }
+		catch(Exception e) { dbException(e); return null; }
+	}
+	
+	public Note loadNote(long id) {
+		try { return connection.findByID(Note.class, id); }
+		catch(Exception e) { dbException(e); return null; }
+	}
 
+	private void dbException(Exception e) {
+		throw new RuntimeException(e);
+	}
 }

@@ -9,10 +9,7 @@ public class Note extends ActiveRecordBase {
 	public String noteText;
 
 	public Note() {
-	}
-
-	public Note(Database db) {
-		super(db);
+		noteText = "";
 	}
 
 	@Override
