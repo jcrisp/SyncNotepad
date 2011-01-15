@@ -1,14 +1,14 @@
-package net.crispdesign.syncnotepad;
+package net.crispdesign.syncnotepad.DbAccess;
 
 import java.util.List;
 
+import net.crispdesign.syncnotepad.Model.Note;
 import org.kroz.activerecord.ActiveRecordBase;
 import org.kroz.activerecord.ActiveRecordException;
 import org.kroz.activerecord.Database;
 import org.kroz.activerecord.DatabaseBuilder;
 
 import android.content.Context;
-import android.util.Log;
 
 public class Db {
 	private final static String tag = "Main";

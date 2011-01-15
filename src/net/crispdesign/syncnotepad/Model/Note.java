@@ -1,4 +1,4 @@
-package net.crispdesign.syncnotepad;
+package net.crispdesign.syncnotepad.Model;
 
 import org.kroz.activerecord.ActiveRecordBase;
 import org.kroz.activerecord.Database;

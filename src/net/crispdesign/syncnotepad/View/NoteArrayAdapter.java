@@ -1,4 +1,4 @@
-package net.crispdesign.syncnotepad;
+package net.crispdesign.syncnotepad.View;
 
 import java.util.List;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import net.crispdesign.syncnotepad.Model.Note;
+import net.crispdesign.syncnotepad.R;
 
 public class NoteArrayAdapter extends ArrayAdapter {
 	private static final String tag = "NoteArrayAdapter";

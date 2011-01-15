@@ -1,11 +1,10 @@
-package net.crispdesign.syncnotepad;
+package net.crispdesign.syncnotepad.View;
 
-import org.kroz.activerecord.ActiveRecordException;
-import java.util.List;
+import net.crispdesign.syncnotepad.DbAccess.Db;
+import net.crispdesign.syncnotepad.Model.Note;
+import net.crispdesign.syncnotepad.R;
 
 import android.app.Activity;
-import android.app.ListActivity;
-import android.app.Instrumentation.ActivityResult;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
