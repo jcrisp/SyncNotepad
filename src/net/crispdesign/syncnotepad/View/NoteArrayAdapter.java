@@ -12,7 +12,6 @@ import net.crispdesign.syncnotepad.Model.Note;
 import net.crispdesign.syncnotepad.R;
 
 public class NoteArrayAdapter extends ArrayAdapter {
-	private static final String tag = "NoteArrayAdapter";
 	private final List<Note> notes;
 
 	public NoteArrayAdapter(Context context, int textViewResourceId, List<Note> list) {
@@ -61,5 +60,4 @@ public class NoteArrayAdapter extends ArrayAdapter {
 		}
 		return firstLine;
 	}
-	
 }

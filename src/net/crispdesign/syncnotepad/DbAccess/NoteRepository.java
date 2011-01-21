@@ -7,10 +7,6 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import net.crispdesign.syncnotepad.Model.Note;
-import org.kroz.activerecord.ActiveRecordBase;
-import org.kroz.activerecord.ActiveRecordException;
-import org.kroz.activerecord.Database;
-import org.kroz.activerecord.DatabaseBuilder;
 
 import android.content.Context;
 

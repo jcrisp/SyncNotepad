@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d303f53-b9d3-4bd9-b1c7-376916c3011e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/DbAccess/NoteRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/DbAccess/Schema.java" />
-      <change type="DELETED" beforePath="F:\James\dev\android\SyncNotepad\src\net\crispdesign\syncnotepad\DbAccess\Db.java" afterPath="" />
+      <change type="DELETED" beforePath="F:\James\dev\android\SyncNotepad\libs\android-active-record.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/Model/Note.java" afterPath="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/Model/Note.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/DbAccess/NoteRepository.java" afterPath="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/DbAccess/NoteRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteArrayAdapter.java" afterPath="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteArrayAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteEditActivity.java" afterPath="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteEditActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteListActivity.java" afterPath="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteListActivity.java" />
     </list>
     <ignored path="SyncNotepad.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,64 +63,7 @@
     <favorites_list name="SyncNotepad" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="NoteRepository.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/DbAccess/NoteRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="36" selection-start="935" selection-end="935" vertical-scroll-proportion="0.57315236">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NoteArrayAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteArrayAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="32" selection-start="876" selection-end="876" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Note.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/Model/Note.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="21" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Schema.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/DbAccess/Schema.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NoteEditActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteEditActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="26" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NoteListActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteListActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="0" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -141,12 +80,12 @@
         <option value="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/Db.java" />
         <option value="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/DbAccess/NotesTable.java" />
         <option value="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/DbAccess/Db.java" />
-        <option value="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteArrayAdapter.java" />
         <option value="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/Model/Note.java" />
-        <option value="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/DbAccess/NoteRepository.java" />
         <option value="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/DbAccess/Schema.java" />
         <option value="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteListActivity.java" />
         <option value="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteEditActivity.java" />
+        <option value="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/DbAccess/NoteRepository.java" />
+        <option value="$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteArrayAdapter.java" />
       </list>
     </option>
   </component>
@@ -527,7 +466,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1178" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -540,7 +479,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14658849" sideWeight="0.6705539" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14658849" sideWeight="0.6705539" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32944608" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944608" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -595,14 +534,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/Model/Note.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="21" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
+        <state line="12" column="21" selection-start="180" selection-end="180" vertical-scroll-proportion="0.36199096">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/DbAccess/Schema.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0">
+        <state line="30" column="0" selection-start="959" selection-end="959" vertical-scroll-proportion="0.7586727">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="0" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.9396682">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteEditActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="26" selection-start="840" selection-end="840" vertical-scroll-proportion="0.57315236">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/DbAccess/NoteRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="26" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -611,28 +573,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteArrayAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="32" selection-start="876" selection-end="876" vertical-scroll-proportion="0.0">
+        <state line="35" column="0" selection-start="822" selection-end="822" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteListActivity.java">
+    <entry file="file://$PROJECT_DIR$/proguard.cfg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="0" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/View/NoteEditActivity.java">
+    <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="26" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/crispdesign/syncnotepad/DbAccess/NoteRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="36" selection-start="935" selection-end="935" vertical-scroll-proportion="0.57315236">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
