@@ -1,6 +1,6 @@
 package net.crispdesign.syncnotepad.View;
 
-import net.crispdesign.syncnotepad.DbAccess.Db;
+import net.crispdesign.syncnotepad.DbAccess.NoteRepository;
 import net.crispdesign.syncnotepad.Model.Note;
 import net.crispdesign.syncnotepad.R;
 
@@ -19,7 +19,7 @@ import android.widget.Toast;
 public class NoteListActivity extends ListActivity {
 
 	private List<Note> notes;
-	private Db db;
+	private NoteRepository noteRepository;
 	private NoteArrayAdapter listAdapter;
 
 	@Override
@@ -27,16 +27,14 @@ public class NoteListActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.note_list);
 		
-		//setUpExceptionHandling();
-
-		db = new Db(getApplicationContext());
+		noteRepository = new NoteRepository(getApplicationContext());
 		updateDisplayedNotes();
 
 		hookEventHandlers();
 	}
 	
 	private void updateDisplayedNotes() {
-		notes = db.allNotes();
+		notes = noteRepository.all();
 		listAdapter = new NoteArrayAdapter(getApplicationContext(),
 				R.layout.note_list_item, notes);
 		setListAdapter(listAdapter);
@@ -60,13 +58,6 @@ public class NoteListActivity extends ListActivity {
 		updateDisplayedNotes();		
 	}
 	
-    private void setUpExceptionHandling() {
-    	Thread.setDefaultUncaughtExceptionHandler(new UncaughtExceptionHandler() {
-			public void uncaughtException(Thread thread, Throwable e) {
-				Toast.makeText(getApplicationContext(), e.toString() , Toast.LENGTH_LONG).show();
-		}});
-    }
-
 	private void hookEventHandlers() {
 		Button newButton = (Button) findViewById(R.id.new_note_button);
 		newButton.setOnClickListener(new OnClickListener() {
@@ -79,6 +70,6 @@ public class NoteListActivity extends ListActivity {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		db.close();
+		noteRepository.close();
 	}
 }

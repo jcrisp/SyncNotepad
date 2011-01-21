@@ -1,6 +1,6 @@
 package net.crispdesign.syncnotepad.View;
 
-import net.crispdesign.syncnotepad.DbAccess.Db;
+import net.crispdesign.syncnotepad.DbAccess.NoteRepository;
 import net.crispdesign.syncnotepad.Model.Note;
 import net.crispdesign.syncnotepad.R;
 
@@ -14,7 +14,7 @@ import android.widget.EditText;
 
 public class NoteEditActivity extends Activity {
 
-	private Db db;
+	private NoteRepository noteRepository;
 	private Note note;
 	private EditText textBox;
 
@@ -23,41 +23,39 @@ public class NoteEditActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.note_edit);
 
-		db = new Db(this);
+		noteRepository = new NoteRepository(this);
 		if (getIntent().getAction().equals(Intent.ACTION_INSERT)) {
-			note = db.newNote();
+			note = new Note();
 		} else {
 			long id = getIntent().getLongExtra("id", -1);
-			note = db.loadNote(id);
+			note = noteRepository.load(id);
 		}
+        noteRepository.close();
 		
 		textBox = (EditText) findViewById(R.id.edit_note_text);
-		textBox.setText(note.noteText);
+		textBox.setText(note.text);
 
-		Button newButton = (Button) findViewById(R.id.done_edit_button);
-		newButton.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {
-				setResult(save() ? RESULT_OK : RESULT_CANCELED, getIntent());
-				finish();
-			}
-		});
-
+        hookEventHandlers();
 	}
 
-	private boolean save() {
+    private void hookEventHandlers() {
+        Button newButton = (Button) findViewById(R.id.done_edit_button);
+        newButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                setResult(save() ? RESULT_OK : RESULT_CANCELED, getIntent());
+                finish();
+            }
+        });
+    }
+
+    private boolean save() {
 		String noteText = textBox.getText().toString();
 		if (noteText.trim().length() == 0) {
 			return false;
 		}
-		note.noteText = noteText;
-		db.save(note);
+		note.text = noteText;
+		noteRepository.save(note);
 		return true;
 	}
 
-	// BUG IN AR - db is null after new then update?
-//	@Override
-//	protected void onDestroy() {
-//		super.onDestroy();
-//		db.close();
-//	}
 }

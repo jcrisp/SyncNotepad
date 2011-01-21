@@ -1,19 +1,22 @@
 package net.crispdesign.syncnotepad.Model;
 
-import org.kroz.activerecord.ActiveRecordBase;
-import org.kroz.activerecord.Database;
-
-public class Note extends ActiveRecordBase {
+public class Note {
 	
-	// public for AR-access
-	public String noteText;
+	public String text;
+    public long id;
 
 	public Note() {
-		noteText = "";
+		text = "";
+        id = -1;
 	}
+
+    public Note(long id, String text) {
+        this.id = id;
+        this.text = text;
+    }
 
 	@Override
 	public String toString() {
-		return this.getID() + ":" + this.noteText;
+		return id + ":" + this.text;
 	}
 }

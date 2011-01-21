@@ -27,7 +27,7 @@ public class NoteArrayAdapter extends ArrayAdapter {
 	
 	@Override
 	public long getItemId(int index) {
-		return getItem(index).getID();
+		return getItem(index).id;
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class NoteArrayAdapter extends ArrayAdapter {
 		TextView label = (TextView) row.findViewById(R.id.list_item_text);
 		Note item = getItem(position);
 
-		String text = item.noteText.toString();
+		String text = item.text.toString();
 		label.setText(firstLine(text));
 
 		return row;
